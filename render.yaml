@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sell-smart-presentation
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: SESSION_SECRET
+        generateValue: true
